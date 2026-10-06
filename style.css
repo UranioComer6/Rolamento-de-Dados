@@ -11,7 +11,7 @@ body {
     background:
         radial-gradient(circle at top, #3a176b, #12051f 60%);
 
-    color: black;
+    color: white;
 
     display: flex;
     justify-content: center;
