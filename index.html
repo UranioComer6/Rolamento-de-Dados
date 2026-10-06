@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rolador de Dados RPG</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>🎲 Rolador de Dados</h1>
+            <p>Escolha seus dados e role!</p>
+        </header>
+
+        <main>
+
+            <section class="configuracao">
+
+                <div class="campo">
+                    <label for="quantidade">Quantidade de dados</label>
+                    <input 
+                        type="number" 
+                        id="quantidade" 
+                        min="1" 
+                        max="50" 
+                        value="1"
+                    >
+                </div>
+
+                <div class="campo">
+                    <label for="lados">Lados do dado</label>
+                    <select id="lados">
+                        <option value="4">D4</option>
+                        <option value="6">D6</option>
+                        <option value="8">D8</option>
+                        <option value="10">D10</option>
+                        <option value="12">D12</option>
+                        <option value="20" selected>D20</option>
+                        <option value="100">D100</option>
+                    </select>
+                </div>
+
+            </section>
+
+            <section class="area-dado">
+
+                <button id="dado" class="dado" onclick="rolarDados()">
+                    <span id="numeroDado">20</span>
+                </button>
+
+                <p class="instrucao">
+                    Clique no dado para rolar
+                </p>
+
+            </section>
+
+            <section class="resultado">
+
+                <h2>Resultado</h2>
+
+                <div id="resultados" class="resultados">
+                    Clique no dado para começar!
+                </div>
+
+                <div class="soma">
+                    Soma: <span id="soma">0</span>
+                </div>
+
+            </section>
+
+            <section class="historico">
+
+                <div class="titulo-historico">
+                    <h2>Histórico</h2>
+
+                    <button onclick="limparHistorico()">
+                        Limpar
+                    </button>
+                </div>
+
+                <div id="listaHistorico">
+                    <p class="vazio">Nenhuma rolagem ainda.</p>
+                </div>
+
+            </section>
+
+        </main>
+
+        <footer>
+            <p>🎲 Rolador de Dados RPG</p>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
